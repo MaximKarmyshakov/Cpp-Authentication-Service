@@ -1,0 +1,40 @@
+# Build directories
+build/
+out/
+
+# CMake
+CMakeUserPresets.json
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+CTestTestfile.cmake
+Testing/
+
+# Visual Studio
+.vs/
+*.VC.db
+*.VC.opendb
+
+# Visual Studio Code
+.vscode/settings.json
+
+# MSVC
+*.obj
+*.pdb
+*.ilk
+*.idb
+*.exe
+*.dll
+*.lib
+*.exp
+
+# Logs
+*.log
+
+# Environment
+.env
+
+# OS
+.DS_Store
+Thumbs.db

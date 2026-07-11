@@ -1,0 +1,13 @@
+{
+  "name": "cpp-auth-service",
+  "version-string": "0.1.0",
+  "builtin-baseline": "97b19caab97ab0c8d36c93230046c8c45fcd41d0",
+
+  "dependencies": [
+    "fmt",
+    "spdlog",
+    "nlohmann-json",
+    "crow",
+    "libpqxx"
+  ]
+}
