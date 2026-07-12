@@ -1,4 +1,5 @@
 #include "config/app_config.hpp"
+#include "database/database.hpp"
 
 #include <crow.h>
 #include <spdlog/spdlog.h>
@@ -8,6 +9,11 @@
 int main() {
   try {
     const AppConfig config = AppConfig::from_environment();
+
+    Database database(config);
+    database.check_connection();
+
+    spdlog::info("Database connection successful");
 
     crow::SimpleApp app;
 
