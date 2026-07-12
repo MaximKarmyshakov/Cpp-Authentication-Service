@@ -1,3 +1,4 @@
+#include "auth/password_hasher.hpp"
 #include "config/app_config.hpp"
 #include "database/database.hpp"
 

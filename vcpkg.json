@@ -8,6 +8,7 @@
     "spdlog",
     "nlohmann-json",
     "crow",
-    "libpqxx"
+    "libpqxx",
+    "argon2"
   ]
 }

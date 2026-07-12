@@ -16,6 +16,7 @@ find_package(Crow CONFIG REQUIRED)
 find_package(spdlog CONFIG REQUIRED)
 find_package(libpqxx CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
+find_package(unofficial-argon2 CONFIG REQUIRED)
 
 add_executable(
   cpp-auth-service
@@ -24,6 +25,8 @@ add_executable(
   src/database/database.cpp
   src/auth/register_request_parser.cpp
   src/auth/register_request_validator.cpp
+  src/auth/validation_result.cpp
+  src/auth/password_hasher.cpp
 )
 
 target_include_directories(
@@ -40,4 +43,5 @@ target_link_libraries(
     spdlog::spdlog
     libpqxx::pqxx
     nlohmann_json::nlohmann_json
+    unofficial::argon2::libargon2
 )
