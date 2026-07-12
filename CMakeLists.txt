@@ -15,12 +15,15 @@ find_package(fmt CONFIG REQUIRED)
 find_package(Crow CONFIG REQUIRED)
 find_package(spdlog CONFIG REQUIRED)
 find_package(libpqxx CONFIG REQUIRED)
+find_package(nlohmann_json CONFIG REQUIRED)
 
 add_executable(
   cpp-auth-service
   src/main.cpp
   src/config/app_config.cpp
   src/database/database.cpp
+  src/auth/register_request_parser.cpp
+  src/auth/register_request_validator.cpp
 )
 
 target_include_directories(
@@ -36,4 +39,5 @@ target_link_libraries(
     Crow::Crow
     spdlog::spdlog
     libpqxx::pqxx
+    nlohmann_json::nlohmann_json
 )
