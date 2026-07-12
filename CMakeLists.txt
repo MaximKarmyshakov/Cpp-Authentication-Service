@@ -14,11 +14,13 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 find_package(fmt CONFIG REQUIRED)
 find_package(Crow CONFIG REQUIRED)
 find_package(spdlog CONFIG REQUIRED)
+find_package(libpqxx CONFIG REQUIRED)
 
 add_executable(
   cpp-auth-service
   src/main.cpp
   src/config/app_config.cpp
+  src/database/database.cpp
 )
 
 target_include_directories(
@@ -33,4 +35,5 @@ target_link_libraries(
     fmt::fmt
     Crow::Crow
     spdlog::spdlog
+    libpqxx::pqxx
 )
