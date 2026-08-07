@@ -27,6 +27,7 @@ add_executable(
   src/auth/register_request_validator.cpp
   src/auth/validation_result.cpp
   src/auth/password_hasher.cpp
+  src/auth/user_repository.cpp
 )
 
 target_include_directories(

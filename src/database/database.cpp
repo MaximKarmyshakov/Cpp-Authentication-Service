@@ -23,3 +23,5 @@ void Database::check_connection() {
     throw std::runtime_error("Database connection check failed");
   }
 }
+
+pqxx::connection &Database::connection() { return connection_; }

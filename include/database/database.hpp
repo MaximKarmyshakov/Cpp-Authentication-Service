@@ -10,6 +10,8 @@ public:
 
   void check_connection();
 
+  pqxx::connection &connection();
+
 private:
   pqxx::connection connection_;
 };
